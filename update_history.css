@@ -1,0 +1,182 @@
+/* History Popup */
+.history-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30.8px; /* 20px * 1.54 */
+  border: 1.54px solid #ccc; /* 1px * 1.54 */
+  box-shadow: 0 0 15.4px rgba(0, 0, 0, 0.3); /* 10px * 1.54 */
+  z-index: 1000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Dark Mode for History Popup */
+body.dark-mode .history-popup {
+  background: #1e1e1e;
+  border: 1.54px solid #666;
+  box-shadow: 0 0 15.4px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Dark Mode for Overlay */
+body.dark-mode .overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Base button styles */
+.btn {
+  display: inline-block;
+  padding: 9.24px 18.48px; /* 6px * 1.54, 12px * 1.54 */
+  margin: 0 7.7px; /* 5px * 1.54 */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 6.16px; /* 4px * 1.54 */
+  cursor: pointer;
+  font-size: 21.56px; /* 14px * 1.54 */
+}
+
+/* Dark Mode for Base Button */
+body.dark-mode .btn {
+  background-color: #0056b3;
+  color: #ffffff;
+  border: 1.54px solid #0056b3;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #003d82;
+  border-color: #003d82;
+}
+
+/* PDF button */
+button[name="download_pdf"] {
+  background-color: #6c0202;
+}
+
+button[name="download_pdf"]:hover {
+  background-color: #3f0404;
+}
+
+/* Dark Mode for PDF Button */
+body.dark-mode button[name="download_pdf"] {
+  background-color: #2a9d8f;
+  border-color: #2a9d8f;
+}
+
+body.dark-mode button[name="download_pdf"]:hover {
+  background-color: #227c70;
+  border-color: #227c70;
+}
+
+/* Excel button */
+button[name="download_excel"] {
+  background-color: #1aa31a;
+}
+
+button[name="download_excel"]:hover {
+  background-color: #148218;
+}
+
+/* Dark Mode for Excel Button */
+body.dark-mode button[name="download_excel"] {
+  background-color: #1e7e34;
+  border-color: #1e7e34;
+}
+
+body.dark-mode button[name="download_excel"]:hover {
+  background-color: #19692c;
+  border-color: #19692c;
+}
+
+/* View button */
+.view-btn {
+  background-color: #2878a7;
+}
+
+/* Dark Mode for View Button */
+body.dark-mode .view-btn {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1.54px solid #666;
+}
+
+.view-btn:hover {
+  background-color: #216988;
+}
+
+/* Dark Mode for View Button Hover */
+body.dark-mode .view-btn:hover {
+  background-color: #2c2c2c;
+  border-color: #777;
+}
+
+/* Utility classes */
+.me-2 {
+  margin-right: 15.4px; /* 10px * 1.54 */
+}
+
+.mb-1 {
+  margin-bottom: 15.4px; /* 10px * 1.54 */
+}
+
+.mb-md-0 {
+  margin-bottom: 0;
+}
+
+.selected {
+  background-color: #e0e0e0;
+}
+
+/* Dark Mode for Selected Class */
+body.dark-mode .selected {
+  background-color: #555;
+}
+
+/* Edit Button */
+.btn.edit-btn {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 7.7px 15.4px; /* 5px * 1.54, 10px * 1.54 */
+  margin-right: 7.7px; /* 5px * 1.54 */
+  text-decoration: none;
+  border: none;
+  border-radius: 4.62px; /* 3px * 1.54 */
+}
+
+/* Dark Mode for Edit Button */
+body.dark-mode .btn.edit-btn {
+  background-color: #1e1e1e;
+  color: #dba204;
+  border-color: #666;
+}
+
+body.dark-mode .btn.edit-btn:hover {
+  background-color: #dba204;
+  border-color: #dba204;
+  color: #ffffff;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #d30a0a;
+  color: white;
+  padding: 7.7px 15.4px; /* 5px * 1.54, 10px * 1.54 */
+  border: none;
+  border-radius: 4.62px; /* 3px * 1.54 */
+}

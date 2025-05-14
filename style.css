@@ -1,0 +1,1189 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  background: #f8f9fa;
+  color: #2b2b2b;
+  font-size: 24.6px; /* 16px * 1.54 */
+}
+
+/* Dark Mode for Body */
+body.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+/* Dashboard Layout (Used for Admin: Login Sheet) */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Dark Mode for Dashboard Container */
+body.dark-mode .dashboard-container {
+  background-color: #444;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 308px; /* 200px * 1.54 */
+  background: #1b263b;
+  color: #fff;
+  padding: 30.8px; /* 20px * 1.54 */
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  margin: 0 0 30.8px;
+  font-size: 30.8px; /* 20px * 1.54 */
+  font-weight: normal;
+  letter-spacing: 0.77px; /* 0.5px * 1.54 */
+}
+
+/* Dark Mode for Sidebar */
+body.dark-mode .sidebar {
+  background: #1b263b; /* Darker, more formal blue */
+}
+
+body.dark-mode .sidebar ul li a {
+  color: #ffffff;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.menu a.active {
+  background: #c9a227; /* Muted gold for active link */
+  color: #1b263b; /* Dark blue text for contrast */
+}
+
+.menu a:hover:not(.logout) {
+  background: #c9a227;
+  color: #1b263b;
+}
+
+.menu a.logout {
+  background: #a61c1c; /* Muted red for logout button */
+}
+
+.menu a.logout:hover {
+  background: #821616; /* Darker red on hover */
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 38.5px; /* 25px * 1.54 */
+  background: #e4e5f1;
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  margin: 0 0 23.1px;
+  font-size: 40.04px; /* 26px * 1.54 */
+  text-align: center;
+  font-weight: normal;
+  color: #1b263b;
+}
+
+.main-content h2 {
+  margin: 0 0 23.1px;
+  font-size: 27.72px; /* 18px * 1.54 */
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Dark Mode for Main Content */
+body.dark-mode .main-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+  color: #ffffff;
+}
+
+/* Form Layout (Add New Entry Form in Admin: Login Sheet) */
+#login-sheet-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15.4px 23.1px; /* 10px * 1.54, 15px * 1.54 */
+  padding: 30.8px;
+  max-width: 2618px; /* 1700px * 1.54 */
+  margin: 46.2px auto;
+  background: #fafafa;
+  border: 1.54px solid #d9d9d9; /* 1px * 1.54 */
+  border-radius: 7.7px; /* 5px * 1.54 */
+  box-shadow: 0 7.7px 23.1px rgba(0, 0, 0, 0.01);
+}
+
+/* Dark Mode for Login Sheet Form */
+body.dark-mode #login-sheet-form {
+  background-color: #3d3c3c;
+  border: 1px solid #3d3c3c;
+}
+
+body.dark-mode #login-sheet-form .form-group label {
+  color: #ffffff;
+}
+
+body.dark-mode #login-sheet-form input,
+body.dark-mode #login-sheet-form select,
+body.dark-mode #login-sheet-form textarea {
+  background-color: #3d3c3c;
+  color: #ffffff;
+  border: 1px solid #777;
+}
+
+body.dark-mode #login-sheet-form input[readonly],
+body.dark-mode #login-sheet-form select[disabled] {
+  background-color: #777;
+}
+
+body.dark-mode #login-sheet-form .error {
+  color: #ff6666; /* Slightly lighter red for better visibility */
+}
+
+body.dark-mode #login-sheet-form .submit-group .btn {
+  background-color: #0056b3;
+  border: 1px solid #0056b3;
+}
+
+body.dark-mode #login-sheet-form .submit-group .btn:hover {
+  background-color: #003d82;
+}
+
+#login-sheet-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Helper classes for spanning columns */
+#login-sheet-form .form-group-span-3 {
+  grid-column: span 3;
+}
+
+/* Ensure inputs, selects, and textareas are compact */
+#login-sheet-form input,
+#login-sheet-form select,
+#login-sheet-form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  height: 38px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background: #fff; /* Updated from #ccc to match other pages */
+  transition: all 0.2s ease;
+}
+
+#login-sheet-form textarea {
+  height: 70px;
+}
+
+#login-sheet-form label {
+  margin-bottom: 6.16px; /* 4px * 1.54 */
+  font-size: 20.02px; /* 13px * 1.54 */
+  font-weight: 700;
+  color: #2b2b2b;
+}
+/* Adjust dropdown arrows */
+#login-sheet-form select {
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 5px center;
+  background-size: 12px;
+  padding-right: 20px;
+}
+
+/* Adjust the button */
+#login-sheet-form .submit-group {
+  grid-column: 1 / 2; /* Only take the first column */
+  text-align: left;
+}
+
+#login-sheet-form .submit-group .btn {
+  padding: 18.48px 46.2px; /* 12px * 1.54, 30px * 1.54 */
+  font-size: 23.1px; /* 15px * 1.54 */
+  background: #1b263b;
+  border-radius: 7.7px;
+}
+
+/* Error messages */
+#login-sheet-form .error {
+  color: #a61c1c;
+  font-size: 0.8em;
+  margin-top: 3px;
+}
+
+#login-sheet-form .submit-group .btn:hover {
+  background: #14213d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #login-sheet-form {
+    padding: 23.1px; /* 15px * 1.54 */
+    gap: 12.32px 18.48px; /* 8px * 1.54, 12px * 1.54 */
+  }
+
+  #login-sheet-form input,
+  #login-sheet-form select,
+  #login-sheet-form textarea {
+    padding: 9.24px 12.32px; /* 6px * 1.54, 8px * 1.54 */
+    font-size: 18.48px; /* 12px * 1.54 */
+    height: 49.28px; /* 32px * 1.54 */
+  }
+
+  #login-sheet-form textarea {
+    height: 77px; /* 50px * 1.54 */
+  }
+
+  #login-sheet-form .submit-group {
+    grid-column: 1 / -1;
+  }
+  #login-sheet-form .submit-group .btn {
+    width: 100%;
+    max-width: 308px; /* 200px * 1.54 */
+  }
+
+  #login-sheet-form .form-group-span-3 {
+    grid-column: span 1;
+  }
+}
+
+/* Remove unnecessary styles */
+#login-sheet-form .form-group-span-2,
+#login-sheet-form .form-group-span-4 {
+  grid-column: auto; /* Reset to default */
+}
+
+#login-sheet-form .form-group:nth-child(7) {
+  margin-bottom: 0; /* Reset */
+}
+
+/* Field Specific Adjustments */
+
+#gender {
+  width: 308px; /* 200px * 1.54 */
+}
+
+#blood_pressure input {
+  width: 231px; /* 150px * 1.54 */
+}
+
+#age,
+#role {
+  margin-bottom: 12.32px; /* 8px * 1.54 */
+}
+
+/* Label Styling */
+.section-group label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+/* Dark Mode for Section Group Labels */
+body.dark-mode .section-group label {
+  color: #ccc;
+}
+
+/* Value Display */
+.value-display {
+  font-weight: 600;
+  color: #2b2b2b;
+  padding: 6px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+/* Dark Mode for Value Display */
+body.dark-mode .value-display {
+  color: #e0e0e0;
+  background: #888;
+  border: 1px solid #777;
+}
+
+#login-sheet-form .form-group-span-3 {
+  grid-column: span 3;
+}
+
+#login-sheet-form .form-group-span-4 {
+  grid-column: span 4;
+}
+
+#login-sheet-form label {
+  font-weight: 600;
+  color: #2b2b2b;
+  font-size: 13px; /* Smaller labels */
+  margin-bottom: 3px;
+}
+
+/* Compact Form Elements */
+.compact-select,
+.narrow-field {
+  padding: 6px 8px !important;
+  font-size: 13px;
+  height: 34px;
+}
+
+.form-group-span-3 {
+  grid-column: span 3;
+}
+
+/* Tight spacing between label and input */
+#login-sheet-form label {
+  margin-bottom: 2px;
+}
+
+#login-sheet-form input,
+#login-sheet-form select,
+#login-sheet-form textarea {
+  width: 100%;
+  padding: 12.32px; /* 8px * 1.54 */
+  font-size: 21.56px; /* 14px * 1.54 */
+  height: 58.52px; /* 38px * 1.54 */
+  border: 1.54px solid #d9d9d9;
+  border-radius: 4.62px; /* 3px * 1.54 */
+  box-sizing: border-box;
+  background: #fff;
+  transition: all 0.308s ease; /* 0.2s * 1.54 */
+}
+
+#login-sheet-form input:focus,
+#login-sheet-form select:focus,
+#login-sheet-form textarea:focus {
+  border-color: #1b263b;
+  outline: none;
+}
+
+#login-sheet-form input[type="time"] {
+  padding-right: 8px;
+}
+
+#login-sheet-form select {
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 10px center;
+  background-size: 12px;
+  background-position: right 8px center; /* Adjust dropdown arrow position */
+  padding-right: 25px; /* Less space for dropdown arrow */
+}
+
+#login-sheet-form textarea {
+  resize: vertical;
+  height: 107.8px; /* 70px * 1.54 */
+  padding: 8px;
+}
+
+#login-sheet-form .error {
+  color: #a61c1c;
+  font-size: 0.8em;
+  margin-top: 3px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #login-sheet-form input,
+  #login-sheet-form select,
+  #login-sheet-form textarea {
+    padding: 6px 8px;
+    font-size: 12px;
+    height: 32px;
+  }
+
+  #login-sheet-form textarea {
+    min-height: 50px;
+  }
+}
+
+/* Style the submit button container */
+#login-sheet-form .submit-group {
+  grid-column: 1 / -1;
+  text-align: left; /* Align button to the left as in the image */
+}
+
+#login-sheet-form .submit-group .btn {
+  width: auto;
+  padding: 10px 25px;
+  background: #1b263b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: #1b263b 0.3s ease;
+}
+
+#login-sheet-form .submit-group .btn:hover {
+  background: #14213d;
+}
+
+/* Add specific styles if needed for alignment */
+#login-sheet-form .form-group.align-end {
+  justify-content: flex-end; /* Aligns label/input to bottom if needed */
+}
+
+/* Style for the Medicine Select Dropdown */
+#login-sheet-form select#medicine {
+  appearance: none; /* Remove default styling */
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 10px center; /* Custom dropdown arrow */
+  background-size: 12px;
+  padding-right: 30px; /* Add padding to prevent text overlap with the arrow */
+  font-size: 1em;
+  color: #2b2b2b;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+  width: 100%; /* Ensure it takes full width of the container */
+}
+
+/* Dark Mode for Medicine Select */
+body.dark-mode #login-sheet-form select#medicine {
+  color: #ffffff;
+  background-color: #3d3c3c;
+  border: 1px solid #777;
+}
+
+#login-sheet-form select#medicine:focus {
+  border-color: #1b263b;
+  outline: none;
+}
+
+/* Form Group for Medicine */
+#login-sheet-form .form-group:nth-child(7) {
+  /* Assuming Medicine is the 7th form group */
+  margin-bottom: 20px;
+}
+
+#login-sheet-form .form-group:nth-child(7) label {
+  font-weight: 600;
+}
+
+#login-sheet-form .form-group:nth-child(7) select {
+  width: 100%;
+}
+
+/* Responsive Styles for Medicine Select */
+@media (max-width: 768px) {
+  #login-sheet-form .form-group:nth-child(7) {
+    grid-column: span 1; /* Ensure it spans a single column on small screens */
+  }
+
+  #login-sheet-form select#medicine {
+    width: 100%;
+    max-width: none; /* Remove max-width for full width */
+  }
+}
+
+/* Add Entry Button */
+.btn {
+  grid-column: span 2;
+  width: 150px; /* This is from your existing .btn class, but we’ll override for table-actions */
+  padding: 10px;
+  background: #1b263b; /* Default button color, will be overridden by clear-btn */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+/* Dark Mode for Buttons */
+body.dark-mode .btn {
+  background: #0056b3;
+  border: 1px solid #0056b3;
+}
+
+body.dark-mode .btn:hover {
+  background: #003d82;
+}
+
+.btn:hover {
+  background: #14213d; /* Darker blue on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-content {
+    max-width: 1400px; /* Constrain width for ultra-wide screens */
+    margin: 0 auto; /* Center content */
+  }
+
+  #login-sheet-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 1600px) {
+    #login-sheet-form {
+      max-width: 1000px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #login-sheet-form {
+      grid-template-columns: 1fr;
+      padding: 25px;
+    }
+
+    /* Full width for all elements on mobile */
+    #login-sheet-form .form-group,
+    #login-sheet-form [class*="form-group-span"] {
+      grid-column: span 1 !important;
+    }
+  }
+  .btn {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+/* Login Page */
+body.login-page {
+  background: #f8f9fa; /* Consistent formal background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark Mode for Login Page */
+body.dark-mode.login-page {
+  background: #333;
+}
+
+body.dark-mode .login-box {
+  background: #777;
+  border: 1px solid #888;
+}
+
+body.dark-mode .login-box h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .login-box label {
+  color: #e0e0e0;
+}
+
+body.dark-mode .login-box input[type="text"],
+body.dark-mode .login-box input[type="password"],
+body.dark-mode .login-box select {
+  background: #888;
+  color: #ffffff;
+  border: 1px solid #777;
+}
+
+body.dark-mode .login-btn {
+  background: #0056b3;
+}
+
+body.dark-mode .login-btn:hover {
+  background: #003d82;
+}
+
+body.dark-mode .error-message {
+  color: #ff6666;
+}
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo img {
+  width: 200px;
+}
+
+/* Login Box */
+.login-box {
+  background: #fff;
+  padding: 46.2px; /* 30px * 1.54 */
+  border-radius: 9.24px; /* 6px * 1.54 */
+  box-shadow: 0 3.08px 6.16px rgba(0, 0, 0, 0.05); /* 2px * 1.54, 4px * 1.54 */
+  width: 616px; /* 400px * 1.54 */
+  text-align: center;
+  border: 1.54px solid #d9d9d9;
+}
+
+.login-box h2 {
+  margin: 0 0 30.8px;
+  color: #1b263b;
+  font-size: 36.96px; /* 24px * 1.54 */
+  font-weight: normal;
+}
+
+.login-box label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #2b2b2b;
+  font-size: 14px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box select {
+  width: 100%;
+  padding: 15.4px; /* 10px * 1.54 */
+  margin-bottom: 23.1px;
+  border: 1.54px solid #d9d9d9;
+  border-radius: 7.7px;
+  box-sizing: border-box;
+  font-size: 21.56px; /* 14px * 1.54 */
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #c9a227; /* Muted gold for formality */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #b38e22; /* Darker gold on hover */
+}
+
+.error-message {
+  color: #a61c1c;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Dashboard Page: Header Actions (Search Bar and Buttons) */
+.header-actions {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  margin-bottom: 25px;
+  flex-wrap: nowrap; /* Prevent wrapping unless absolutely necessary */
+  gap: 15px; /* Consistent spacing between elements */
+  padding: 10px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+body.dark-mode .search-bar input {
+  background: #888;
+  color: #ffffff;
+  border: 1px solid #777;
+}
+
+body.dark-mode .clear-btn {
+  background-color: #1e1e1e;
+  color: #d30a0a;
+  border: 1px solid #d30a0a;
+}
+
+body.dark-mode .clear-btn:hover {
+  background: #821616;
+  color: #e0e0e0;
+  border: 1px solid #821616;
+}
+
+/* Add specific styles for PDF and Excel buttons in dark mode */
+body.dark-mode .table-actions .download-pdf-btn2 {
+  background-color: #1e1e1e; /* Dark teal for PDF button */
+  border-color: #05a3ca;
+  color: #e0e0e0;
+  border: 1px solid #05a3ca;
+}
+
+body.dark-mode .table-actions .download-pdf-btn2:hover {
+  background-color: #05a3ca;
+  border-color: #05a3ca;
+  border: 1px solid #05a3ca;
+}
+
+body.dark-mode .table-actions .download-excel-btn {
+  background-color: #1e1e1e; /* Dark green for Excel button */
+  border-color: #1e7e34;
+  color: #e0e0e0;
+}
+
+body.dark-mode .table-actions .download-excel-btn:hover {
+  background-color: #19692c; /* Darker green on hover */
+  border-color: #19692c;
+}
+
+body.dark-mode .table-actions button:nth-child(3) {
+  background: #0056b3;
+}
+
+body.dark-mode .table-actions button:nth-child(3):hover {
+  background: #003d82;
+}
+
+.search-bar {
+  flex: 1; /* Take up remaining space */
+  max-width: none; /* Remove max-width to allow full stretch */
+  min-width: 200px; /* Ensure it doesn’t collapse too much */
+}
+
+.search-bar input {
+  width: 100%;
+  height: 58.52px; /* 34px * 1.54 */
+  padding: 12.32px; /* 8px * 1.54 */
+  border: 1.54px solid #d9d9d9;
+  border-radius: 7.7px;
+  box-sizing: border-box;
+  font-size: 21.56px; /* 14px * 1.54 */
+}
+
+.search-bar input:focus {
+  border-color: #1b263b;
+  outline: none;
+}
+
+.table-actions {
+  display: flex;
+  align-items: center; /* Vertically align buttons */
+  gap: 10px; /* Space between buttons */
+  flex-wrap: nowrap; /* Keep buttons on one line */
+  margin-left: auto; /* Push buttons to the right */
+}
+
+.table-actions button {
+  height: 52.36px; /* 34px * 1.54 */
+  padding: 0 24.64px; /* 16px * 1.54 */
+  border: none;
+  border-radius: 7.7px; /* 5px * 1.54 */
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 21.56px; /* 14px * 1.54 */
+  font-family: "Source Sans Pro", sans-serif;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Clear Button Specific Styles (already in your style.css) */
+.clear-btn {
+  background: #d30a0a; /* Matches the red in the image */
+  color: #fff;
+}
+
+.clear-btn:hover {
+  background: #821616; /* Darker red on hover, matches your existing style */
+  transform: translateY(-1px); /* Subtle lift effect */
+}
+
+/* Bootstrap-like Utility Classes (me-2, mb-1, mb-md-0) */
+.me-2 {
+  margin-right: 0.5rem; /* Adds right margin (8px in Bootstrap) */
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem; /* Adds bottom margin (4px in Bootstrap) */
+}
+
+/* Update Button */
+.update-btn {
+  background: #0d3c93; /* Matches image blue */
+  color: #fff;
+}
+
+.update-btn:hover {
+  background: #14213d;
+  transform: translateY(-1px);
+}
+
+/* Download PDF Button */
+.download-pdf-btn {
+  background: #05a3ca; /* Matches image teal */
+  color: #fff;
+}
+
+.download-pdf-btn:hover {
+  background: #044758;
+  transform: translateY(-1px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-actions {
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+
+  .search-bar {
+    flex: 1 1 100%; /* Full width on small screens */
+    margin-bottom: 10px;
+  }
+
+  .table-actions {
+    flex: 1 1 100%; /* Full width for buttons */
+    justify-content: flex-end; /* Keep buttons aligned right */
+  }
+}
+
+/* Download Excel Button (Visible in History Menu Dashboard) */
+.table-actions button:nth-child(3) {
+  /* Targeting the "Download Excel" button */
+  background: #1b263b; /* Formal blue to match Update button */
+  color: #fff;
+}
+
+.table-actions button:nth-child(3):hover {
+  background: #14213d;
+  transform: translateY(-1px);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  min-height: 100px;
+  table-layout: auto;
+  border: 1px solid #000000; /* Light border for formality */
+}
+
+/* Table Styles */
+table th,
+table td {
+  padding: 18.48px; /* 12px * 1.54 */
+  text-align: left;
+  border-bottom: 1.54px solid #000000;
+  font-size: 21.56px; /* 14px * 1.54 */
+  color: #2b2b2b;
+}
+
+table th {
+  background: #012465; /* Formal blue for header */
+  color: #fff;
+  font-weight: 600; /* Slightly bolder */
+  text-transform: uppercase; /* Uppercase for formality */
+  letter-spacing: 0.5px; /* Subtle spacing */
+}
+
+table:empty::after {
+  content: "No items available.";
+  display: block;
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Dark Mode for Empty Table Message */
+body.dark-mode table:empty::after {
+  color: #ccc;
+}
+
+table th:nth-child(12),
+table td:nth-child(12) {
+  text-align: center;
+}
+table th:nth-child(10),
+table td:nth-child(10) {
+  text-align: center;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Inventory Form */
+.inventory-form,
+.excel-import {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+}
+
+/* Dark Mode for Inventory Form and Excel Import */
+body.dark-mode .inventory-form,
+body.dark-mode .excel-import {
+  background: #777;
+  border: 1px solid #888;
+}
+
+body.dark-mode .inventory-form h3,
+body.dark-mode .excel-import h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .inventory-form label,
+body.dark-mode .excel-import label {
+  color: #e0e0e0;
+}
+
+body.dark-mode .inventory-form input,
+body.dark-mode .inventory-form select,
+body.dark-mode .excel-import input[type="file"] {
+  background: #888;
+  color: #ffffff;
+  border: 1px solid #777;
+}
+
+.inventory-form h3,
+.excel-import h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #1b263b;
+}
+
+.inventory-form label,
+.excel-import label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.inventory-form input,
+.inventory-form select,
+.excel-import input[type="file"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: #a61c1c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  height: 52.36px; /* 34px * 1.54 */
+  padding: 0 24.64px; /* 16px * 1.54 */
+  border: none;
+  border-radius: 7.7px; /* 5px * 1.54 */
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 21.56px; /* 14px * 1.54 */
+}
+
+/* Dark Mode for Remove Button */
+body.dark-mode .remove-btn {
+  background: #d30a0a;
+}
+
+body.dark-mode .remove-btn:hover {
+  background: #821616;
+}
+
+.remove-btn:hover {
+  background: #821616;
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-preview,
+  #print-preview * {
+    visibility: visible;
+  }
+  #print-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .dashboard-container,
+  .sidebar,
+  .main-content,
+  .header-actions,
+  #dashboard-table {
+    display: none !important;
+  }
+}
+
+/* Additional Styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Dark Mode for Header */
+body.dark-mode .header {
+  color: #ffffff;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Dark Mode for Info */
+body.dark-mode .info {
+  color: #e0e0e0;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+/* Dark Mode for Details */
+body.dark-mode .details {
+  color: #e0e0e0;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.history-section {
+  margin-top: 20px;
+}
+
+/* Dark Mode for History Section */
+body.dark-mode .history-section {
+  color: #e0e0e0;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #d9d9d9;
+  padding: 8px;
+  text-align: left;
+}
+
+.history-table th {
+  background-color: #f2f2f2;
+  color: #2b2b2b;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+}
+
+.inline-form {
+  display: inline;
+}
+
+.non-editable {
+  pointer-events: none; /* Prevents interaction */
+  background-color: #e9ecef; /* Matches readonly input background */
+  opacity: 0.65; /* Mimics disabled look */
+  cursor: not-allowed; /* Indicates it's not editable */
+}
+
+/* Dark Mode for Non-Editable */
+body.dark-mode .non-editable {
+  background-color: #777;
+  opacity: 0.65;
+}
+
+.student-lookup {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#student-lookup-input {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Dark Mode for Student Lookup Input */
+body.dark-mode #student-lookup-input {
+  background: #888;
+  color: #ffffff;
+  border: 1px solid #777;
+}
+
+#student-lookup-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #4caf50; /* Green to match common button styles */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Dark Mode for Student Lookup Button */
+body.dark-mode #student-lookup-btn {
+  background-color: #4caf50;
+}
+
+body.dark-mode #student-lookup-btn:hover {
+  background-color: #45a049;
+}
+
+#student-lookup-btn:hover {
+  background-color: #45a049;
+}
