@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Records</title>
+    <!-- Style CSS (Using the refined CSS from the previous step) -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+
+      body {
+        background-color: #e9ecef;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .table-title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px !important;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .attendance-container {
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
+        width: 95%;
+        max-width: 1100px;
+        padding: 0;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      table.attendance-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+        color: #212529;
+      }
+
+      table.attendance-table thead > tr > th {
+        background-color: #343a40;
+        color: #ffffff;
+        border-bottom: 2px solid #495057;
+        font-weight: 500;
+        padding: 10px 15px;
+        text-align: left;
+        white-space: nowrap;
+        background-image: none !important;
+      }
+
+      table.attendance-table tbody > tr > td {
+        padding: 10px 15px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+        vertical-align: middle;
+        background-color: #f8f9fa;
+      }
+
+      table.attendance-table tbody > tr:last-child > td {
+        border-bottom: none;
+      }
+
+      /* Column Specific Alignments & Widths */
+      table.attendance-table th:first-child,
+      table.attendance-table td:first-child {
+        text-align: center;
+        width: 5%;
+      }
+      table.attendance-table th:nth-child(2), /* picture */
+        table.attendance-table td:nth-child(2) {
+        width: 10%;
+      }
+      table.attendance-table th:nth-child(3), /* Student no.*/
+        table.attendance-table td:nth-child(3) {
+        width: 35%;
+      }
+      table.attendance-table th:nth-child(4), /* FullName */
+        table.attendance-table td:nth-child(4) {
+        width: 35%;
+      }
+      table.attendance-table th:nth-child(5), /* Course & Section */
+        table.attendance-table td:nth-child(5) {
+        width: 20%;
+      }
+      table.attendance-table th:nth-child(6), /* Time In */
+        table.attendance-table td:nth-child(6) {
+        width: 15%;
+        white-space: nowrap;
+      }
+      table.attendance-table th:last-child, /* Action */
+        table.attendance-table td:last-child {
+        text-align: center;
+        width: 10%;
+      }
+
+      .action-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .delete-button {
+        width: auto;
+        height: auto;
+        font-size: 13px;
+        display: inline-block !important;
+        margin: 0;
+        padding: 4px 8px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        line-height: 1;
+        font-family: sans-serif;
+      }
+      .delete-button:hover {
+        background-color: #c82333;
+      }
+
+      .dataTables_info,
+      .dataTables_paginate,
+      .dataTables_length,
+      .dataTables_filter {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="table-title">Attendance Log</h1>
+
+      <div class="attendance-container">
+        <table class="attendance-table">
+          <thead>
+            <tr>
+              <!-- Updated Headers -->
+              <th>#</th>
+              <th>picture</th>
+              <th>Student no</th>
+              <th>FullName</th>
+              <th>Course & Section</th>
+              <th>Time In</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9</td>
+              <td><!-- Empty picture cell --></td>
+              <!-- Added     for spacing -->
+              <td>02000343090</td>
+              <td>gabriel ali</td>
+              <td>bscs and 101</td>
+              <td>14:52:19</td>
+              <td>
+                <div class="action-button">
+                  <button class="delete-button">X</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td></td>
+              <!-- Added     for spacing -->
+              <td>02000123456</td>
+              <td>jane doe</td>
+              <td>bsit and 202</td>
+              <td>15:01:05</td>
+              <td>
+                <div class="action-button">
+                  <button class="delete-button">X</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td></td>
+              <!-- Added     for spacing -->
+              <td>02000789101</td>
+              <td>john smith</td>
+              <td>bscpe and 303</td>
+              <td>15:10:30</td>
+              <td>
+                <div class="action-button">
+                  <button class="delete-button">X</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- End attendance-container -->
+    </div>
+    <!-- End main -->
+  </body>
+</html>
