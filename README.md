@@ -1,6 +1,6 @@
 # Clinic Management System
 
-This web app management system can help nurses record students faculty and staff their health condition, and their medicine needed to remedy provided by the nurse. The system can also save their patient record via file format like pdf.
+This web app management system can help nurses record students, faculty and staff their health condition, and their medicine needed to remedy provided by the nurse. The system can also save their patient record via file format like pdf.
 
 ## Files
 
