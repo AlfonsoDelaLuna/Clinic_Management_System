@@ -2,6 +2,18 @@
 
 This web app management system can help nurses record students, faculty and staff their health condition, and their medicine needed to remedy provided by the nurse. The system can also save their patient record via file format like pdf.
 
+## Process Before
+
+
+
+## Problem Encounter
+
+
+
+## Objective 
+
+
+
 ## Files
 
 - `clinic_db.sql`: This file contains the database schema for the clinic management system.
