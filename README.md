@@ -4,7 +4,7 @@ This web app management system can help nurses record students, faculty and staf
 
 ## Process Before
 
-
+The patient enters the clinic for an emergency like high fever or an accident within the school premises. The nurse will do an analysis like what was the problem, their condition, and the medicine needed to prevent the same scenario happening again. After that, the patient is resting on their clinic. The nurse will write down in a paper board like the patients name time in, time out, health condition, medicine used, preview health problems and a signature from the patient if it was fully rested. At the end of the day, the nurse stores the data in a storage drawer to use them as inverntory for the school and buy medicine for aditional storage. 
 
 ## Problem Encounter
 
