@@ -8,7 +8,11 @@ The patient enters the clinic for an emergency like high fever or an accident wi
 
 ## Problem Encounter
 
+The issue arise are the following: 1. Organized patient data - 
 
+2. Transfering data from paper based to digital -
+   
+3. Easier inventory - 
 
 ## Objective 
 
