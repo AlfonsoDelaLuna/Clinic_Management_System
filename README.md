@@ -4,15 +4,40 @@ This web app management system can help nurses record students, faculty and staf
 
 ## Process Before
 
-The patient enters the clinic for an emergency like high fever or an accident within the school premises. The nurse will do an analysis like what was the problem, their condition, and the medicine needed to prevent the same scenario happening again. After that, the patient is resting on their clinic. The nurse will write down in a paper board like the patients name time in, time out, health condition, medicine used, preview health problems and a signature from the patient if it was fully rested. At the end of the day, the nurse stores the data in a storage drawer to use them as inverntory for the school and buy medicine for aditional storage. 
+The patient enters the clinic for an emergency like high fever or an accident within the school premises. The nurse will do an analysis like what was the problem, their condition, and the medicine needed to prevent the same scenario happening again. After that, the patient is resting on their clinic. The nurse will write down in a paper board like the patients name time in, time out, health condition, medicine used, preview health problems and a signature from the patient if it was fully rested. At the end of the day, the nurse stores the data in a storage drawer to use them as inventory for the school and buy medicine for additional storage. 
 
 ## Problem Encounter
 
-The issue arise are the following: 1. Organized patient data - 
+The issue arise are the following: 
 
-2. Transfering data from paper based to digital -
+1. Manual Documentation
    
-3. Easier inventory - 
+•	Writing details on a paper board is time-consuming.
+•	Handwritten records can be prone to errors, illegibility, and loss/damage.
+
+2. Data Storage Issues
+•	Storing papers in a drawer risks misplacement, damage (fire, water, pests), or difficulty in retrieving records.
+•	No backup system in case the physical records are lost.
+
+3. Inventory Tracking Problems
+•	Medicines are not tracked in real-time, which may cause shortages or overstock.
+•	Lack of systematic monitoring of expiration dates.
+
+4. Delayed Response to Emergencies
+•	Nurse spends time writing records instead of focusing immediately on patient care.
+•	Searching old records for past medical history is slow.
+
+5. Limited Data Analysis
+•	Difficult to analyze trends in illnesses, accidents, or medicine usage since everything is on paper.
+•	Harder to justify budget requests for additional medicine without proper reports.
+
+6. Privacy and Confidentiality Concerns
+•	Paper records stored in drawers may not be secure, leading to potential breaches of student health information.
+
+7. Dependence on Nurse’s Availability
+•	If the nurse is absent, accessing records or continuing proper documentation may be disrupted.
+
+
 
 ## Objective 
 
