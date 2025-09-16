@@ -1,19 +1,17 @@
-/* login.css - Updated Styles for a Larger Login Box with Password Toggle */
-
+/*-- Global Styles --*/
 body.login-page {
   background: url("Clinic_Background_New.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  position: relative; /* Needed for absolute logo */
-  box-sizing: border-box;
+  position: relative;
 }
 
-/* Logo Styling - Positioned Top Left */
+/*-- Logo --*/
 .logo {
   position: absolute;
   top: 20px;
@@ -26,13 +24,13 @@ body.login-page {
   height: auto;
 }
 
-/* Login Box Styling - Centered and Larger */
+/*-- Login Box --*/
 .login-box {
   background: rgba(255, 255, 255, 0.95);
-  padding: 40px 45px; /* More room to breathe */
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  width: clamp(500px, 80vw, 800px); /* Wider and responsive */
+  padding: 50px 60px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  width: clamp(700px, 80vw, 900px);
   text-align: left;
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
@@ -40,44 +38,46 @@ body.login-page {
 }
 
 .login-box h2 {
-  margin: 0 0 30px; /* A bit more space below */
+  margin: 0 0 40px;
   color: #000;
-  font-size: 2.5em; /* Bigger title */
+  font-size: 3em;
   font-weight: bold;
   text-align: center;
 }
 
+/*-- Form --*/
 .login-box .form-group {
-  margin-bottom: 20px; /* Slightly more spacing */
+  margin-bottom: 25px;
+  text-align: left;
 }
 
 .login-box label {
   display: block;
-  margin-bottom: 8px; /* Tiny bump for clarity */
+  margin-bottom: 10px;
   color: #000;
-  font-size: 1.5em; /* Slightly larger text */
+  font-size: 1.8em;
   font-weight: 500;
 }
 
-/* Styles for inputs and select - Removed max-width to fit login-box */
 .login-box input[type="text"],
 .login-box input[type="password"],
 .login-box select {
   width: 100%;
-  padding: 12px 40px 12px 15px; /* Adjusted padding for icon */
+  padding: 15px;
   margin-bottom: 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 2em; /* Adjusted to a more standard size for readability */
-  transition: border-color 0.2s ease;
+  font-size: 1.8em;
+  transition: border-color 0.2s ease, box-shadow 0.3s;
 }
 
 .login-box input[type="text"]:focus,
 .login-box input[type="password"]:focus,
 .login-box select:focus {
-  border-color: #f4c430;
   outline: none;
+  border-color: #f4c430;
+  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.2);
 }
 
 .login-box select {
@@ -85,29 +85,28 @@ body.login-page {
   background-color: #fff;
   background-image: url('data:image/svg+xml;utf8,<svg fill="%23555" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
   background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
-  padding-right: 30px;
+  background-position: right 15px center;
+  background-size: 14px;
+  padding-right: 40px;
 }
 
-/* Password Container for Toggle Icon */
+/*-- Password Toggle --*/
 .password-container {
   position: relative;
-  width: 100%;
 }
 
 .icon-container {
   position: absolute;
-  right: 10px;
-  top: 0;
-  bottom: 0;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
 }
 
 .password-toggle {
   width: 20px;
-  height: 20px;
+  height: auto;
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.2s ease;
@@ -117,50 +116,45 @@ body.login-page {
   opacity: 1;
 }
 
-/* Login Button Styling - Removed max-width to fit login-box */
+/*-- Login Button --*/
 .login-btn {
   width: 100%;
-  padding: 15px 25px; /* Beefier button */
-  background: #f4c430;
+  padding: 14px;
+  background: #f4c430; /* Retained yellow color */
   border: none;
-  border-radius: 5px;
-  color: #000;
-  font-size: 17px; /* Bolder text */
-  font-weight: bold;
-  font-size: 1.5em;
+  border-radius: 6px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  margin-top: 20px; /* More space above */
-  transition: background-color 0.2s ease;
-  text-align: center;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .login-btn:hover {
   background: #e0b028;
+  transform: translateY(-2px);
 }
 
-/* Error Message */
+/*-- Error Message --*/
 .error-message {
-  color: #dc3545;
-  font-size: 1.5em; /* A tad bigger */
-  margin: 15px 0;
+  color: #d93025;
+  font-size: 2em;
+  margin: -10px 0 15px;
   text-align: center;
 }
 
-/* Intern Credits Styling - Bottom Right (Fixed to Viewport) */
+/*-- Intern Credits --*/
 .intern-credits {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 5px;
   z-index: 10;
   color: #000;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Slight background to make text readable */
+  background: rgba(255, 255, 255, 0.9);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -172,7 +166,7 @@ body.login-page {
 
 .intern-credits p {
   margin: 0;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -183,15 +177,11 @@ body.login-page {
   align-items: center;
 }
 
-.credit-item {
-  text-align: center;
-}
-
 .credit-image {
-  width: 50px; /* Adjusted to a reasonable size for ID photos */
-  height: 60px; /* Adjusted to maintain aspect ratio of provided ID photos */
-  object-fit: cover; /* Ensures the image fits without distortion */
-  border-radius: 3px; /* Slight rounding to match ID photo style */
+  width: 50px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 3px;
   margin-bottom: 2px;
 }
 
@@ -202,346 +192,31 @@ body.login-page {
   white-space: nowrap;
 }
 
-/* Responsive adjustment */
+/*-- Responsive --*/
 @media (max-width: 768px) {
   .intern-credits {
     bottom: 10px;
     right: 10px;
     padding: 5px;
   }
-
-  .intern-credits p {
-    font-size: 12px;
-  }
-
-  .credit-image {
-    width: 40px;
-    height: 48px;
-  }
-
-  .credit-item span {
-    font-size: 10px;
-  }
-
-  .credits-wrapper {
-    gap: 10px;
-  }
-
-  .credits-group {
-    gap: 8px;
-  }
-}
-
-/* Dashboard Styles (for admin_history.php and admin_loginsheet.php) */
-body.dashboard-page {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-/* Light mode (default) - From admin_loginsheet.php (adjusted to match screenshot) */
-body.dashboard-page {
-  --background-color: #000000; /* Black background as in screenshot */
-  --text-color: #000000; /* Black text for main content */
-  --sidebar-bg: #1b263b; /* Dark sidebar background */
-  --sidebar-text: #ffffff; /* White text for sidebar */
-  --main-content-bg: #e6f0fa; /* Light blue main content background */
-  --input-bg: #ffffff; /* White input background */
-  --input-border: #d3d3d3; /* Light gray input border */
-  --button-bg: #1b263b; /* Dark blue button background */
-  --button-text: #ffffff; /* White button text */
-}
-
-/* Dark mode - Consistent across both files */
-body.dashboard-page[data-theme="dark"] {
-  --background-color: #1a1a1a;
-  --text-color: #e0e0e0;
-  --sidebar-bg: #1b263b;
-  --sidebar-text: #e0e0e0;
-  --main-content-bg: #222;
-  --input-bg: #333;
-  --input-border: #555;
-  --button-bg: #1e90ff;
-  --button-text: #fff;
-}
-
-/* Dashboard Container */
-.dashboard-container {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 250px;
-  background-color: var(--sidebar-bg);
-  color: var(--sidebar-text);
-  padding: 20px;
-  box-sizing: border-box;
-  position: fixed;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.sidebar h2 {
-  margin: 0 0 20px;
-  font-size: 24px;
-  text-align: center;
-}
-
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 10px 0;
-}
-
-.theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-#theme-icon {
-  font-size: 20px;
-}
-
-.sidebar .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar .menu li {
-  margin-bottom: 10px;
-}
-
-.sidebar .menu a {
-  color: var(--sidebar-text);
-  text-decoration: none;
-  font-size: 18px;
-  display: block;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
-}
-
-.sidebar .menu a:hover,
-.sidebar .menu a.active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Main Content */
-.main-content {
-  margin-left: 250px;
-  padding: 20px;
-  flex-grow: 1;
-  background-color: var(--main-content-bg);
-  box-sizing: border-box;
-}
-
-.main-content h1 {
-  margin: 0 0 20px;
-  font-size: 28px;
-}
-
-.main-content h2 {
-  margin: 0 0 15px;
-  font-size: 24px;
-}
-
-/* Form Elements */
-input,
-select,
-textarea {
-  background-color: var(--input-bg);
-  border: 1px solid var(--input-border);
-  color: var(--text-color);
-  padding: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 14px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--button-bg);
-}
-
-input[readonly],
-select[disabled],
-textarea[readonly] {
-  background-color: #f0f0f0;
-}
-
-/* Buttons */
-.btn {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.2s ease;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-/* Pagination - From admin_history.php */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.pagination a.btn {
-  padding: 5px 10px;
-  margin: 0 2px;
-  text-decoration: none;
-  color: var(--text-color);
-  background-color: var(--input-bg);
-  border: 1px solid var(--input-border);
-  border-radius: 4px;
-}
-
-.pagination a.btn.active {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  border-color: var(--button-bg);
-}
-
-.pagination a.btn.previous,
-.pagination a.btn.next {
-  background-color: #333;
-  color: #fff;
-  border-color: #333;
-}
-
-.pagination span.ellipsis {
-  padding: 5px 10px;
-  color: var(--text-color);
-}
-
-/* Table Styles - From admin_history.php */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background-color: var(--input-bg);
-}
-
-th,
-td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid var(--input-border);
-}
-
-th {
-  background-color: var(--sidebar-bg);
-  color: var(--sidebar-text);
-}
-
-/* Popup Styles - From admin_history.php */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 1000;
-}
-
-.history-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--main-content-bg);
-  color: var(--text-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  z-index: 1001;
-  display: none;
-}
-
-.history-popup h3 {
-  margin: 0 0 15px;
-  font-size: 20px;
-  text-align: center;
-}
-
-.notification {
-  color: var(--text-color);
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Custom styling for the birthday dropdowns - From admin_loginsheet.php */
-.birthday-group {
-  display: flex;
-  gap: 10px;
-}
-
-.birthday-group select {
-  padding: 5px;
-  border: 1px solid var(--input-border);
-  border-radius: 4px;
-  font-size: 14px;
-  width: 100px;
-  background-color: var(--input-bg);
-  color: var(--text-color);
-}
-
-.birthday-group select:focus {
-  outline: none;
-  border-color: var(--button-bg);
-}
-
-/* Error Message - From admin_loginsheet.php */
-.error {
-  color: #ff0000;
-  font-size: 12px;
-  margin-top: 5px;
-  display: none;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-  }
-
-  .main-content {
-    margin-left: 200px;
-  }
+  .intern-credits p { font-size: 12px; }
+  .credit-image { width: 40px; height: 48px; }
+  .credit-item span { font-size: 10px; }
+  .credits-wrapper { gap: 10px; }
+  .credits-group { gap: 8px; }
 }
 
 @media (max-width: 576px) {
-  .sidebar {
-    width: 100%;
-    position: static;
-    height: auto;
+  .login-box {
+    padding: 30px 25px;
+    margin: 0 15px;
   }
-
-  .main-content {
-    margin-left: 0;
+  .logo {
+    position: static;
+    margin-bottom: 20px;
+  }
+  .login-page {
+    align-items: flex-start;
+    padding-top: 40px;
   }
 }

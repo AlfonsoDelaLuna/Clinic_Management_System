@@ -1,91 +1,115 @@
 # Clinic Management System
 
-This web app management system can help nurses record students, faculty and staff their health condition, and their medicine needed to remedy provided by the nurse. The system can also save their patient record via file format like pdf.
+This web-based Clinic Management System is designed to help school nurses efficiently record and manage the health information of students, faculty, and staff. It replaces the manual paper-based process with a secure and streamlined digital solution, allowing for better patient care, inventory management, and data analysis.
 
-## Process Before
+## The Problem
 
-The patient enters the clinic for an emergency like high fever or an accident within the school premises. The nurse will do an analysis like what was the problem, their condition, and the medicine needed to prevent the same scenario happening again. After that, the patient is resting on their clinic. The nurse will write down in a paper board like the patients name time in, time out, health condition, medicine used, preview health problems and a signature from the patient if it was fully rested. At the end of the day, the nurse stores the data in a storage drawer to use them as inventory for the school and buy medicine for additional storage. 
+The traditional process of using paper boards and storage drawers for clinic records presents several challenges:
 
-## Problem Encounter
+1.  **Manual Documentation:** 
+    - Time-consuming, prone to errors, and records can be lost or damaged.
+2.  **Data Storage Issues:** 
+    - Physical records are difficult to retrieve, lack backups, and are vulnerable to damage.
 
-The issue arise are the following: 
+3.  **Inventory Tracking Problems:** 
+    - Inefficient tracking of medicine stock and expiration dates, leading to shortages or waste.
 
-1. Manual Documentation
-   
-•	Writing details on a paper board is time-consuming.
-•	Handwritten records can be prone to errors, illegibility, and loss/damage.
+4.  **Delayed Response to Emergencies:** 
+    - Slow access to patient history hinders immediate care.
+    
+5.  **Limited Data Analysis:** 
+    - Difficulty in identifying health trends and justifying budget needs.
+    
+6.  **Privacy Concerns:** 
+    - Paper records lack the security required for confidential health information.
+    
+7.  **Dependence on Nurse’s Availability:** 
+    - Access to records is disrupted if the nurse is absent.
 
-2. Data Storage Issues
-•	Storing papers in a drawer risks misplacement, damage (fire, water, pests), or difficulty in retrieving records.
-•	No backup system in case the physical records are lost.
+## Objective
 
-3. Inventory Tracking Problems
-•	Medicines are not tracked in real-time, which may cause shortages or overstock.
-•	Lack of systematic monitoring of expiration dates.
+The primary objective of this system is to digitize and automate the clinic's daily operations to solve the problems listed above. Key goals include:
 
-4. Delayed Response to Emergencies
-•	Nurse spends time writing records instead of focusing immediately on patient care.
-•	Searching old records for past medical history is slow.
+-   **Improve Efficiency:** 
+    - Reduce the time spent on manual documentation, allowing the nurse to focus on patient care.
+    
+-   **Enhance Data Security:** 
+    - Securely store patient records in a database with controlled access.
+    
+-   **Streamline Inventory Management:** 
+    - Implement real-time tracking of medicine supplies and expiration dates.
+    
+-   **Enable Data-Driven Decisions:** 
+    - Provide tools for generating reports and analyzing health trends.
+    
+-   **Ensure Continuity of Care:** 
+    - Make records easily accessible to authorized personnel when needed.
 
-5. Limited Data Analysis
-•	Difficult to analyze trends in illnesses, accidents, or medicine usage since everything is on paper.
-•	Harder to justify budget requests for additional medicine without proper reports.
+## Features
 
-6. Privacy and Confidentiality Concerns
-•	Paper records stored in drawers may not be secure, leading to potential breaches of student health information.
+-   **User Authentication:** 
+    - Secure login for administrators (nurse) and guests (patients).
 
-7. Dependence on Nurse’s Availability
-•	If the nurse is absent, accessing records or continuing proper documentation may be disrupted.
+-   **Patient Log Management:** 
+    - A digital log sheet to record patient visits, symptoms, and treatments.
+    
+-   **Medical History Tracking:** 
+    - Easily access the complete medical history of any patient.
+    
+-   **Inventory Management:** 
+    - Track medicine quantities, manage stock, and monitor expiration dates.
+    
+-   **Data Export:** 
+    - Export inventory and patient logs to Excel for reporting and analysis.
+    
+-   **Print Preview:** 
+    - Generate print-friendly versions of patient records.
 
+## Technologies Used
 
+-   **Frontend:** HTML, CSS, JavaScript
+-   **Backend:** PHP
+-   **Database:** MySQL
+-   **Dependencies:** [PhpSpreadsheet](https://phpspreadsheet.readthedocs.io/) for Excel exporting (managed via Composer).
 
-## Objective 
+## Setup and Installation
 
+Follow these steps to get the application running on your local machine.
 
+### Prerequisites
 
-## Files
+-   A web server environment like XAMPP or WAMP.
+-   [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
-- `clinic_db.sql`: This file contains the database schema for the clinic management system.
-- `style.css`: CSS file for styling the application.
-- `admin_history.php`: Displays the history of admin actions.
-- `admin_inventory.php`: Manages the inventory of the clinic.
-- `admin_loginsheet.php`: Handles admin login functionality.
-- `check_name.php`: Checks if a name is available.
-- `check_student.php`: Checks if a student exists.
-- `clear_dashboard.php`: Clears the dashboard.
-- `db_connect.php`: Contains the database connection details.
-- `delete_item.php`: Deletes an item from the inventory.
-- `edit_history.php`: Allows editing of the admin history.
-- `export_inventory_excel.php`: Exports the inventory to an Excel file.
-- `fetch_clinic_logs.php`: Fetches clinic logs.
-- `guest_confirmation.php`: Confirms guest details.
-- `guest_loginsheet.php`: Handles guest login functionality.
-- `hash.php`: Handles password hashing.
-- `index.php`: The main entry point of the application.
-- `login.php`: Handles user login functionality.
-- `logout.php`: Handles user logout functionality.
-- `print_preview.php`: Generates a print preview.
-- `process_add_entry.php`: Processes adding a new entry.
-- `process_loginsheet.php`: Processes the login sheet.
-- `process_update.php`: Processes updates to the system.
+### 1. Database Setup
 
-## Database Setup
+1.  Create a new database in your MySQL server (e.g., via phpMyAdmin).
+2.  Import the `clinic_db.sql` file into the newly created database. This will set up the required tables.
+3.  Open `db_connect.php` and update the database credentials (`$servername`, `$username`, `$password`, `$dbname`) to match your environment.
 
-1. Import the `clinic_db.sql` file into your MySQL database.
-2. Update the database connection details in `db_connect.php` with your database credentials.
+### 2. Install Dependencies
 
-## Dependencies
+1.  Open a terminal or command prompt in the project's root directory.
+2.  Run the following command to install the required PHP packages:
+    ```bash
+    composer install
+    ```
 
-This project uses Composer, a dependency manager for PHP, to manage dependencies. The dependencies are listed in the `composer.json` file. Composer also uses the `vendor` directory to store the installed packages and the autoloader.
+### 3. Running the Application
 
-To install the dependencies, run:
+1.  Move the entire project folder into your web server's root directory (e.g., `htdocs` for XAMPP).
+2.  Start your Apache and MySQL services from your server's control panel.
+3.  Open your web browser and navigate to `http://localhost/your-project-folder-name` (e.g., `http://localhost/Clinic_Management_System`).
 
-```
+## File Descriptions
 
-## Running the Application
-
-1. Run `composer install` to install the dependencies.
-2. Start your PHP server.
-3. Navigate to the project directory in your browser.
-composer install
-```
+-   `index.php`: The login page and main entry point of the application.
+-   `login.css`: Main stylesheet for the login page and dashboard.
+-   `db_connect.php`: Handles the connection to the MySQL database.
+-   `admin_*.php`: A collection of files for the administrator dashboard (history, inventory, loginsheet).
+-   `guest_*.php`: Files related to the guest/patient login and confirmation process.
+-   `process_*.php`: PHP scripts that handle form submissions and data processing.
+-   `export_inventory_excel.php`: Generates and downloads an Excel file of the current inventory.
+-   `clinic_db.sql`: The database schema file.
+-   `composer.json` / `composer.lock`: Define the project dependencies.
+-   `vendor/`: Directory where Composer installs the dependencies.

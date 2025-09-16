@@ -34,99 +34,99 @@ if (!$existing_record) {
 }
 
 // Sanitize and validate fields
-$student_number = trim($_POST['student_number'] ?? '');
+$student_number = htmlspecialchars(trim($_POST['student_number'] ?? ''));
 if (!preg_match('/^\d{11}$/', $student_number)) {
     $errors['student-number'][] = 'Student Number must be 11 digits.';
 } elseif ($student_number !== $existing_record['student_number']) {
     $errors['student-number'][] = 'Student Number cannot be changed.';
 }
 
-$name = trim($_POST['name'] ?? '');
+$name = htmlspecialchars(trim($_POST['name'] ?? ''));
 if (!preg_match('/^[A-Za-z\s,\.]{2,50}$/', $name)) {
     $errors['name'][] = 'Name must be 2-50 characters, letters, spaces, commas, or dots only.';
 }
 
-$gender = $_POST['gender'] ?? '';
+$gender = htmlspecialchars($_POST['gender'] ?? '');
 if (!in_array($gender, ['Male', 'Female', 'Other'])) {
     $errors['gender'][] = 'Gender must be Male, Female, or Other.';
 }
 
-$age = $_POST['age'] ?? '';
+$age = htmlspecialchars($_POST['age'] ?? '');
 if (!is_numeric($age) || $age < 1 || $age > 100) {
     $errors['age'][] = 'Age must be between 1 and 100.';
 }
 
-$role = $_POST['role'] ?? '';
+$role = htmlspecialchars($_POST['role'] ?? '');
 if (!in_array($role, ['Student', 'Faculty', 'Staff'])) {
     $errors['role'][] = 'Role must be Student, Faculty, or Staff.';
 }
 
-$course_section = trim($_POST['course_section'] ?? '');
+$course_section = htmlspecialchars(trim($_POST['course_section'] ?? ''));
 if ($role === 'Student' && !preg_match('/^[A-Za-z0-9\-]{2,10}$/', $course_section)) {
     $errors['course-section'][] = 'Course and Section must be 2-10 characters (e.g., BT-705).';
 }
 
-$blood_pressure = trim($_POST['blood_pressure'] ?? '');
+$blood_pressure = htmlspecialchars(trim($_POST['blood_pressure'] ?? ''));
 if ($blood_pressure && !preg_match('/^\d{2,3}\/\d{2,3}$/', $blood_pressure)) {
     $errors['blood-pressure'][] = 'Blood Pressure must be in 120/80 format.';
 }
 
-$heart_rate = $_POST['heart_rate'] ?? '';
+$heart_rate = htmlspecialchars($_POST['heart_rate'] ?? '');
 if ($heart_rate && (!is_numeric($heart_rate) || $heart_rate < 1 || $heart_rate > 200)) {
     $errors['heart-rate'][] = 'Heart Rate must be between 1 and 200 bpm.';
 }
 
-$blood_oxygen = $_POST['blood_oxygen'] ?? '';
+$blood_oxygen = htmlspecialchars($_POST['blood_oxygen'] ?? '');
 if ($blood_oxygen && (!is_numeric($blood_oxygen) || $blood_oxygen < 1 || $blood_oxygen > 100)) {
     $errors['blood-oxygen'][] = 'Blood Oxygen must be between 1 and 100%.';
 }
 
-$height = $_POST['height'] ?? '';
+$height = htmlspecialchars($_POST['height'] ?? '');
 if ($height && (!is_numeric($height) || $height < 1 || $height > 251)) {
     $errors['height'][] = 'Height must be between 1 and 251 cm.';
 }
 
-$weight = $_POST['weight'] ?? '';
+$weight = htmlspecialchars($_POST['weight'] ?? '');
 if ($weight && (!is_numeric($weight) || $weight < 1)) {
     $errors['weight'][] = 'Weight must be a positive number.';
 }
 
-$temperature = $_POST['temperature'] ?? '';
+$temperature = htmlspecialchars($_POST['temperature'] ?? '');
 if ($temperature && (!is_numeric($temperature) || $temperature < 1 || $temperature > 100)) {
     $errors['temperature'][] = 'Temperature must be between 1 and 100°C.';
 }
 
-$time_out = $_POST['time_out'] ?? '';
+$time_out = htmlspecialchars($_POST['time_out'] ?? '');
 if ($time_out && !preg_match('/^\d{2}:\d{2}$/', $time_out)) {
     $errors['time-out'][] = 'Time Out must be in 24-hour format (e.g., 14:30).';
 }
 
-$sickness = trim($_POST['sickness'] ?? '');
+$sickness = htmlspecialchars(trim($_POST['sickness'] ?? ''));
 if ($sickness && !preg_match('/^[A-Za-z0-9\s]{2,50}$/', $sickness)) {
     $errors['sickness'][] = 'Sickness must be 2-50 characters, letters, numbers, spaces.';
 }
 
-$purpose_of_visit = trim($_POST['purpose_of_visit'] ?? '');
+$purpose_of_visit = htmlspecialchars(trim($_POST['purpose_of_visit'] ?? ''));
 if ($purpose_of_visit && !preg_match('/^[A-Za-z0-9\s]{2,100}$/', $purpose_of_visit)) {
     $errors['purpose_of_visit'][] = 'Purpose of Visit must be 2-100 characters, letters, numbers, spaces.';
 }
 
-$health_history = trim($_POST['health_history'] ?? '');
+$health_history = htmlspecialchars(trim($_POST['health_history'] ?? ''));
 if ($health_history && !preg_match('/^[A-Za-z0-9\s]{2,100}$/', $health_history)) {
     $errors['health_history'][] = 'Health History must be 2-100 characters, letters, numbers, spaces.';
 }
 
-$medicine = trim($_POST['medicine'] ?? '');
+$medicine = htmlspecialchars(trim($_POST['medicine'] ?? ''));
 if ($medicine && !preg_match('/^[A-Za-z0-9\s]{2,50}$/', $medicine)) {
     $errors['medicine'][] = 'Medicine must be 2-50 characters, letters, numbers, spaces.';
 }
 
-$quantity = $_POST['quantity'] ?? '';
+$quantity = htmlspecialchars($_POST['quantity'] ?? '');
 if ($quantity && (!is_numeric($quantity) || $quantity < 1)) {
     $errors['quantity'][] = 'Quantity must be a positive number.';
 }
 
-$remarks = trim($_POST['remarks'] ?? '');
+$remarks = htmlspecialchars(trim($_POST['remarks'] ?? ''));
 if ($remarks && !preg_match('/^[A-Za-z0-9\s]{2,200}$/', $remarks)) {
     $errors['remarks'][] = 'Remarks must be 2-200 characters, letters, numbers, spaces.';
 }

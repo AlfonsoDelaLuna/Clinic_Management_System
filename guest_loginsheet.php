@@ -327,6 +327,12 @@ if ($birthday) {
             -webkit-box-shadow: 0 0 0 30px #282828 inset !important;
             -webkit-text-fill-color: #e0e0e0 !important;
         }
+
+        .data-loaded {
+            background-color: #d4edda !important; /* Light green */
+            border-color: #c3e6cb !important;
+            color: #155724 !important;
+        }
     </style>
 </head>
 
@@ -356,7 +362,8 @@ if ($birthday) {
                     <label for="patient_id">ID</label>
                     <input type="text" id="patient_id" name="patient_id"
                         placeholder="ID (e.g., 02000123456, CLN012A, CLN0123A, CLN0123, NA)"
-                        value="<?= htmlspecialchars($form_data['patient_id'] ?? '') ?>">
+                        value="<?= htmlspecialchars($form_data['patient_id'] ?? '') ?>"
+                        class="<?= !empty($existing_record) ? 'data-loaded' : '' ?>">
                     <div id="patient_id-error" class="error">
                         <?php if (isset($errors['patient_id'])): ?>
                             <?= implode('<br>', $errors['patient_id']) ?>

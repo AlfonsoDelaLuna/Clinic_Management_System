@@ -8,28 +8,28 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 }
 
 // Include the database connection
-include 'db_connection.php';
+include 'db_connect.php';
 
-// Retrieve form data
-$student_number = $_POST['student_number'];
-$name = $_POST['name'];
-$gender = $_POST['gender'];
-$age = $_POST['age'];
-$role = $_POST['role'];
-$course_section = $_POST['course_section'];
-$blood_pressure = $_POST['blood_pressure'];
-$heart_rate = $_POST['heart_rate'];
-$blood_oxygen = $_POST['blood_oxygen'];
-$height = $_POST['height'];
-$weight = $_POST['weight'];
-$temperature = $_POST['temperature'];
-$time_out = $_POST['time_out'];
-$sickness = $_POST['sickness'];
-$purpose_of_visit = $_POST['purpose_of_visit'];
-$health_history = $_POST['health_history'];
-$medicine = $_POST['medicine'];
-$quantity = $_POST['quantity'];
-$remarks = $_POST['remarks'];
+// Retrieve and sanitize form data
+$student_number = htmlspecialchars($_POST['student_number']);
+$name = htmlspecialchars($_POST['name']);
+$gender = htmlspecialchars($_POST['gender']);
+$age = htmlspecialchars($_POST['age']);
+$role = htmlspecialchars($_POST['role']);
+$course_section = htmlspecialchars($_POST['course_section']);
+$blood_pressure = htmlspecialchars($_POST['blood_pressure']);
+$heart_rate = htmlspecialchars($_POST['heart_rate']);
+$blood_oxygen = htmlspecialchars($_POST['blood_oxygen']);
+$height = htmlspecialchars($_POST['height']);
+$weight = htmlspecialchars($_POST['weight']);
+$temperature = htmlspecialchars($_POST['temperature']);
+$time_out = htmlspecialchars($_POST['time_out']);
+$sickness = htmlspecialchars($_POST['sickness']);
+$purpose_of_visit = htmlspecialchars($_POST['purpose_of_visit']);
+$health_history = htmlspecialchars($_POST['health_history']);
+$medicine = htmlspecialchars($_POST['medicine']);
+$quantity = htmlspecialchars($_POST['quantity']);
+$remarks = htmlspecialchars($_POST['remarks']);
 
 // Prepare and execute the SQL statement
 $sql = "INSERT INTO loginsheet (student_number, name, gender, age, role, course_section, blood_pressure, heart_rate, blood_oxygen, height, weight, temperature, time_out, sickness, purpose_of_visit, health_history, medicine, quantity, remarks) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

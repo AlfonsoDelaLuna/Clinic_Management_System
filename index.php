@@ -7,6 +7,9 @@
     <title>Clinic Management System</title>
     <link rel="stylesheet" href="login.css">
     <link rel="icon" href="images/sti_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body class="login-page">
