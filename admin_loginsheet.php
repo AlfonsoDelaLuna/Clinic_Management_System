@@ -72,31 +72,6 @@ $selected_year = $birthday ? (new DateTime($birthday))->format('Y') : '';
             margin-top: 0;
         }
 
-        .form-group label {
-            color: #555;
-            margin-bottom: 5px;
-            display: block;
-            font-weight: bold;
-            font-size: 2em;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="number"],
-        .form-group input[type="time"],
-        .form-group input[list],
-        .form-group select,
-        .form-group textarea {
-            background-color: #fff;
-            color: #333;
-            border: 1px solid #ccc;
-            padding: 8px 10px;
-            border-radius: 4px;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 5px;
-            font-size: 3em;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-        }
 
         .form-group input[readonly],
         .form-group select[disabled],
@@ -130,24 +105,6 @@ $selected_year = $birthday ? (new DateTime($birthday))->format('Y') : '';
             color: #aaa;
         }
 
-        .main-content .btn {
-            background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 3em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            display: block;
-            width: auto;
-            margin: 20px auto 0;
-        }
-
-        .main-content .btn:hover {
-            background-color: #0056b3;
-        }
 
         .theme-switch-wrapper {
             display: flex;

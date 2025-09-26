@@ -152,11 +152,14 @@ body.dark-mode .selected {
 .btn.edit-btn {
   background-color: #f0ad4e;
   color: white;
-  padding: 7.7px 15.4px; /* 5px * 1.54, 10px * 1.54 */
-  margin-right: 7.7px; /* 5px * 1.54 */
+  padding: 9.24px 18.48px;
   text-decoration: none;
   border: none;
   border-radius: 4.62px; /* 3px * 1.54 */
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Dark Mode for Edit Button */

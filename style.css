@@ -124,10 +124,10 @@ body.dark-mode h2 {
 #login-sheet-form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15.4px 23.1px; /* 10px * 1.54, 15px * 1.54 */
-  padding: 30.8px;
-  max-width: 2618px; /* 1700px * 1.54 */
-  margin: 46.2px auto;
+  gap: 2px 20px;
+  padding: 15px;
+  max-width: 2400px;
+  margin: 20px auto;
   background: #fafafa;
   border: 1.54px solid #d9d9d9; /* 1px * 1.54 */
   border-radius: 7.7px; /* 5px * 1.54 */
@@ -164,6 +164,7 @@ body.dark-mode #login-sheet-form .error {
 body.dark-mode #login-sheet-form .submit-group .btn {
   background-color: #0056b3;
   border: 1px solid #0056b3;
+  font-size: 20px;
 }
 
 body.dark-mode #login-sheet-form .submit-group .btn:hover {
@@ -199,12 +200,6 @@ body.dark-mode #login-sheet-form .submit-group .btn:hover {
   height: 70px;
 }
 
-#login-sheet-form label {
-  margin-bottom: 6.16px; /* 4px * 1.54 */
-  font-size: 20.02px; /* 13px * 1.54 */
-  font-weight: 700;
-  color: #2b2b2b;
-}
 /* Adjust dropdown arrows */
 #login-sheet-form select {
   appearance: none;
@@ -333,10 +328,10 @@ body.dark-mode .value-display {
 }
 
 #login-sheet-form label {
-  font-weight: 600;
+  font-weight: 500;
   color: #2b2b2b;
-  font-size: 13px; /* Smaller labels */
-  margin-bottom: 3px;
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 /* Compact Form Elements */
@@ -361,7 +356,7 @@ body.dark-mode .value-display {
 #login-sheet-form textarea {
   width: 100%;
   padding: 12.32px; /* 8px * 1.54 */
-  font-size: 21.56px; /* 14px * 1.54 */
+  font-size: 1.5rem;
   height: 58.52px; /* 38px * 1.54 */
   border: 1.54px solid #d9d9d9;
   border-radius: 4.62px; /* 3px * 1.54 */
@@ -442,6 +437,18 @@ body.dark-mode .value-display {
 /* Add specific styles if needed for alignment */
 #login-sheet-form .form-group.align-end {
   justify-content: flex-end; /* Aligns label/input to bottom if needed */
+}
+
+/* Reduce margin for specific fields to bring them closer */
+#login-sheet-form .form-group:has(#blood_pressure),
+#login-sheet-form .form-group:has(#heart_rate),
+#login-sheet-form .form-group:has(#blood_oxygen) {
+  margin-top: -40px;
+}
+#login-sheet-form .form-group:has(#blood_pressure),
+#login-sheet-form .form-group:has(#heart_rate),
+#login-sheet-form .form-group:has(#blood_oxygen) {
+  margin-top: -40px;
 }
 
 /* Style for the Medicine Select Dropdown */
@@ -1128,14 +1135,20 @@ body.dark-mode .history-section {
   }
 }
 
-.inline-form {
-  display: inline;
+#history-table td form {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#history-table td .btn {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .non-editable {
   pointer-events: none; /* Prevents interaction */
   background-color: #e9ecef; /* Matches readonly input background */
-  opacity: 0.65; /* Mimics disabled look */
   cursor: not-allowed; /* Indicates it's not editable */
 }
 
