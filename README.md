@@ -6,8 +6,7 @@ A web-based Clinic Management System is designed to help school nurses efficient
 
 The traditional process of using paper boards and storage drawers for clinic records presents several challenges:
 
-1.  **Manual Documentation:** 
-    - Time-consuming, prone to errors, and records can be lost or damaged.
+1.  **Manual Documentation:**  - Time-consuming, prone to errors, and records can be lost or damaged.
 2.  **Data Storage Issues:** 
     - Physical records are difficult to retrieve, lack backups, and are vulnerable to damage.
 
