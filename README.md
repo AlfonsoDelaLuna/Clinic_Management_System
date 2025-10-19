@@ -1,9 +1,7 @@
 # Clinic Management System
-
 A web-based Clinic Management System is designed to help school nurses efficiently record and manage the health information of students, faculty, and staff. It replaces the manual paper-based process with a secure and streamlined digital solution, allowing for better patient care, inventory management, and data analysis.
 
 ## The Problem
-
 The traditional process of using paper boards and storage drawers for clinic records presents several challenges:
 
 1.  **Manual Documentation:**  - Time-consuming, prone to errors, and records can be lost or damaged.
@@ -15,7 +13,6 @@ The traditional process of using paper boards and storage drawers for clinic rec
 7.  **Dependence on Nurse’s Availability:** - Access to records is disrupted if the nurse is absent.
 
 ## Objective
-
 The primary objective of this system is to digitize and automate the clinic's daily operations to solve the problems listed above. Key goals include:
 
 -   **Improve Efficiency:** 
@@ -34,7 +31,6 @@ The primary objective of this system is to digitize and automate the clinic's da
     - Make records easily accessible to authorized personnel when needed.
 
 ## Features
-
 -   **User Authentication:** 
     - Secure login for administrators (nurse) and guests (patients).
 
@@ -54,29 +50,24 @@ The primary objective of this system is to digitize and automate the clinic's da
     - Generate print-friendly versions of patient records.
 
 ## Technologies Used
-
 -   **Frontend:** HTML, CSS, JavaScript
 -   **Backend:** PHP
 -   **Database:** MySQL
 -   **Dependencies:** [PhpSpreadsheet](https://phpspreadsheet.readthedocs.io/) for Excel exporting (managed via Composer).
 
 ## Setup and Installation
-
 Follow these steps to get the application running on your local machine.
 
 ### Prerequisites
-
 -   A web server environment like XAMPP or WAMP.
 -   [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 ### 1. Database Setup
-
 1.  Create a new database in your MySQL server (e.g., via phpMyAdmin).
 2.  Import the `clinic_db.sql` file into the newly created database. This will set up the required tables.
 3.  Open `db_connect.php` and update the database credentials (`$servername`, `$username`, `$password`, `$dbname`) to match your environment.
 
 ### 2. Install Dependencies
-
 1.  Open a terminal or command prompt in the project's root directory.
 2.  Run the following command to install the required PHP packages:
     ```bash
@@ -84,13 +75,11 @@ Follow these steps to get the application running on your local machine.
     ```
 
 ### 3. Running the Application
-
 1.  Move the entire project folder into your web server's root directory (e.g., `htdocs` for XAMPP).
 2.  Start your Apache and MySQL services from your server's control panel.
 3.  Open your web browser and navigate to `http://localhost/your-project-folder-name` (e.g., `http://localhost/Clinic_Management_System`).
 
 ## File Descriptions
-
 -   `index.php`: The login page and main entry point of the application.
 -   `login.css`: Main stylesheet for the login page and dashboard.
 -   `db_connect.php`: Handles the connection to the MySQL database.
