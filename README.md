@@ -26,23 +26,17 @@ The primary objective of this system is to digitize and automate the clinic's da
 -   **Ensure Continuity of Care:** Make records easily accessible to authorized personnel when needed.
 
 ## Features
--   **User Authentication:** 
-    - Secure login for administrators (nurse) and guests (patients).
+-   **User Authentication:** Secure login for administrators (nurse) and guests (patients).
 
--   **Patient Log Management:** 
-    - A digital log sheet to record patient visits, symptoms, and treatments.
+-   **Patient Log Management:** digital log sheet to record patient visits, symptoms, and treatments.
     
--   **Medical History Tracking:** 
-    - Easily access the complete medical history of any patient.
+-   **Medical History Tracking:** sily access the complete medical history of any patient.
     
--   **Inventory Management:** 
-    - Track medicine quantities, manage stock, and monitor expiration dates.
+-   **Inventory Management:** Track medicine quantities, manage stock, and monitor expiration dates.
     
--   **Data Export:** 
-    - Export inventory and patient logs to Excel for reporting and analysis.
+-   **Data Export:** Export inventory and patient logs to Excel for reporting and analysis.
     
--   **Print Preview:** 
-    - Generate print-friendly versions of patient records.
+-   **Print Preview:** Generate print-friendly versions of patient records.
 
 ## Technologies Used
 -   **Frontend:** HTML, CSS, JavaScript
