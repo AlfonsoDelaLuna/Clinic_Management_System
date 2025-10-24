@@ -16,26 +16,17 @@ The traditional process of using paper boards and storage drawers for clinic rec
 The primary objective of this system is to digitize and automate the clinic's daily operations to solve the problems listed above. Key goals include:
 
 -   **Improve Efficiency:** Reduce the time spent on manual documentation, allowing the nurse to focus on patient care.
-    
 -   **Enhance Data Security:** Securely store patient records in a database with controlled access.
-    
 -   **Streamline Inventory Management:** Implement real-time tracking of medicine supplies and expiration dates.
-    
 -   **Enable Data-Driven Decisions:** Provide tools for generating reports and analyzing health trends.
-    
 -   **Ensure Continuity of Care:** Make records easily accessible to authorized personnel when needed.
 
 ## Features
 -   **User Authentication:** Secure login for administrators (nurse) and guests (patients).
-
 -   **Patient Log Management:** digital log sheet to record patient visits, symptoms, and treatments.
-    
 -   **Medical History Tracking:** sily access the complete medical history of any patient.
-    
 -   **Inventory Management:** Track medicine quantities, manage stock, and monitor expiration dates.
-    
 -   **Data Export:** Export inventory and patient logs to Excel for reporting and analysis.
-    
 -   **Print Preview:** Generate print-friendly versions of patient records.
 
 ## Technologies Used
