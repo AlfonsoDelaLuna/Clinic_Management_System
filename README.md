@@ -51,7 +51,7 @@ Follow these steps to get the application running on your local machine.
     ```bash
     composer install
     ```
-
+    
 ### 3. Running the Application
 1.  Move the entire project folder into your web server's root directory (e.g., `htdocs` for XAMPP).
 2.  Start your Apache and MySQL services from your server's control panel.
