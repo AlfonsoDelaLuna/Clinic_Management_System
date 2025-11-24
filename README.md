@@ -3,13 +3,13 @@ A web-based management system for a school clinic. It is designed to help school
 
 ## The Problem
 The traditional process of using paper boards and storage drawers for clinic records presents several challenges:
-1.  **Manual Documentation:**  - Time-consuming, prone to errors, and records can be lost or damaged.
-2.  **Data Storage Issues:** - Physical records are difficult to retrieve, lack backups, and are vulnerable to damage.
-3.  **Inventory Tracking Problems:** - Inefficient tracking of medicine stock and expiration dates, leading to shortages or waste.
-4.  **Delayed Response to Emergencies:** - Slow access to patient history hinders immediate care.   
-5.  **Limited Data Analysis:** - Difficulty in identifying health trends and justifying budget needs.
-6.  **Privacy Concerns:** - Paper records lack the security required for confidential health information.
-7.  **Dependence on Nurse’s Availability:** - Access to records is disrupted if the nurse is absent.
+1. **Manual Documentation:**  - Time-consuming, prone to errors, and records can be lost or damaged.
+2. **Data Storage Issues:** - Physical records are difficult to retrieve, lack backups, and are vulnerable to damage.
+3. **Inventory Tracking Problems:** - Inefficient tracking of medicine stock and expiration dates, leading to shortages or waste.
+4. **Delayed Response to Emergencies:** - Slow access to patient history hinders immediate care.
+5. **Limited Data Analysis:** - Difficulty in identifying health trends and justifying budget needs.
+6. **Privacy Concerns:** - Paper records lack the security required for confidential health information.
+7. **Dependence on Nurse’s Availability:** - Access to records is disrupted if the nurse is absent.
 
 ## Objective
 The primary objective of this system is to digitize and automate the clinic's daily operations to solve the problems listed above. Key goals include:
